@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400&display=swap');
+:root {
+    --tamnoPlava: #1d527c;  /* rgb(29, 82, 124) */
+    --svetloPlava: #459ad3; /* rgb(69, 154, 211) */
+    --orange: #fd7f45;      /* rgb(253, 127, 69) */
+    --tamnoSiva: #3c3b3c;
+    --svetloSiva: lightgray;
+    --bela: #fff;
+    --transition: .3s ease;
+    --padding: 100px 0;
+    --bodyFont: 'Open Sans', sans-serif;
+    --headings: 'Montserrat', sans-serif;
+    --font: 16px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: var(--tamnoSiva);
+    line-height: 1.6;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    transition: var(--transition);
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+button {
+    padding: 15px 30px;
+    border: 1px solid white;
+    background: transparent;
+    font-size: 1rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+button:hover {
+    cursor: pointer;
+    background:white;
+    color: var(--tamnoSiva);
+    transition: var(--transition);
+}
+nav {
+    background: linear-gradient(to right,var(--orange), var(--tamnoPlava));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 200px;
+}
+nav ul {
+    display: flex;
+}
+nav a {
+    color: var(--bela);
+    padding: 0 30px;
+}
+nav a:hover {
+    color: var(--svetloSiva);
+}
+/**** Header */
+
+header {
+    background-image:linear-gradient(rgba(29, 82, 124, .8),rgba(253, 127, 69, .8)), url(img/baloon.jpg);
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--bela);
+}
+header h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+header h1 span {
+    font-style: italic;
+    font-weight: 400;
+
+}
+header p {
+    font-size: 1.2rem;
+    padding: 30px;
+}
+/**** about */
+
+.about {
+    padding: var(--padding);
+    display: flex;
+}
+.about img {
+    width: 100%;
+    border-radius: 20px 50px;
+    box-shadow: 0 0 20px var(--tamnoPlava);
+}
+.about article:first-child {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.about article:first-child p {
+    padding-right: 50px;
+}
+.about article:last-child {
+    flex: 1;
+}
+.headings {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--tamnoPlava);
+}
+.headings::after {
+    display: block;
+    content: "";
+    height: 1px;
+    width: 100px;
+    background: var(--tamnoPlava);
+    margin: 10px 0 20px 0;
+}
+/**** services ****/
+
+.services {
+    background-image:linear-gradient(rgba(29, 82, 124,.9), rgba(29, 82, 124,.9)), url(img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--bela);
+    padding: var(--padding);
+}
+.services h2 {
+    color: var(--bela);
+}
+.services .headings::after {
+    background: var(--orange);
+}
+.services .container {
+    display: flex;
+}
+.services .container article {
+    flex: 1;
+}
+.services .container article:first-child {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center
+}
+.services .container article:first-child i {
+    font-size: 5rem;
+    color: var(--orange);
+    padding: 20px;
+    flex: 0 0 50%;
+}
+.services p {
+    padding: 30px 0;
+}
+/**** blog ****/
+.blog {
+    padding: var(--padding);
+    text-align: center;
+}
+.blog .row {
+    display: flex;
+    justify-content: space-between;
+}
+.blog img {
+    width: 100%;
+}
+.blog .headings::after {
+    background: var(--orange);
+    margin: 10px auto 40px auto;
+}
+.blog article {
+    flex: 0 0 30%;
+}
+.blog button {
+    background: var(--tamnoPlava);
+    margin: 20px 0;
+}
+.blog button:hover {
+    background: var(--orange);
+}
+.blog h3 {
+    font-size: 1.7rem;
+}
+.blog p {
+    text-align: justify;
+}
+
+footer {
+    padding: var(--padding);
+    background-image: linear-gradient(to right, rgba(253, 127, 69,.9), rgba(29, 82, 124,.9)), url(img/baloon.jpg);
+    color: var(--bela);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer a {
+    color: var(--tamnoPlava);
+    font-size: 2rem;
+    margin: 10px;
+}
+footer a:hover {
+    color: var(--svetloPlava);
+}
+footer p {
+    padding-top: 30px;
+}
+
